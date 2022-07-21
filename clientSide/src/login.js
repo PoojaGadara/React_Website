@@ -12,7 +12,7 @@ const Login = () => {
         formData.append("email", email)
         formData.append("password",password)
     
-     await axios.post('/company/userLogin',formData).then((res) => alert(res.data.message))
+     await axios.post('https://floating-wildwood-03447.herokuapp.com/company/userLogin',formData).then((res) => alert(res.data.message))
         navigate('/profile')
     }
   return (

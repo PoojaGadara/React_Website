@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
-const url=`/company/createUser`;
+const url=`https://floating-wildwood-03447.herokuapp.com/company/createUser`;
 
 
 const Contact = () => {

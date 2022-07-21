@@ -20,7 +20,7 @@ const Update = () => {
     useEffect(() => {
         async function getUser() {
          try {
-          const user = await axios.get(`/company/showUser/${state.id}`)
+          const user = await axios.get(`https://floating-wildwood-03447.herokuapp.com/company/showUser/${state.id}`)
           setUser(user.data);
          } catch (error) {
           console.log("Something is Wrong");
@@ -37,7 +37,7 @@ const Update = () => {
     const updateAPIData = async (e) => {
         e.preventDefault()
         try{
-            await axios.put(`/company/updateUser/${state.id}`,{
+            await axios.put(`https://floating-wildwood-03447.herokuapp.com/company/updateUser/${state.id}`,{
                 name,
                 phone,
                 email,

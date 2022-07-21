@@ -10,7 +10,7 @@ const Profile = () => {
 
     const handleDelete = async (id) => {
         alert(`Are you want to delete data?`);
-       await axios.post(`/company/deleteUser/${id}`)
+       await axios.post(`https://floating-wildwood-03447.herokuapp.com/company/deleteUser/${id}`)
     }
   
 
@@ -37,7 +37,7 @@ const Profile = () => {
                   </Link>
                 </div>
             </div>
-            <h1>You are running this application in <b>{process.env.NODE_ENV}</b> mode.</h1>
+          
             <div className='row'>
                 <div className='table-responsive'>
                     <table className='table table-striped table-hover table-bordered'>
