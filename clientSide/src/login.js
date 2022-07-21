@@ -12,7 +12,7 @@ const Login = () => {
         formData.append("email", email)
         formData.append("password",password)
     
-     await axios.post('http://localhost:8000/company/userLogin',formData).then((res) => alert(res.data.message))
+     await axios.post('/company/userLogin',formData).then((res) => alert(res.data.message))
         navigate('/profile')
     }
   return (

@@ -10,14 +10,14 @@ const Profile = () => {
 
     const handleDelete = async (id) => {
         alert(`Are you want to delete data?`);
-       await axios.post(`${process.env}/company/deleteUser/${id}`)
+       await axios.post(`/company/deleteUser/${id}`)
     }
   
 
   useEffect(() =>{
     async function getUserData(){
         try{
-          const user = await axios.get(`${process.env}/company/showUser`)
+          const user = await axios.get(`/company/showUser`)
           setUser(user.data);
         }catch(err){
           console.log(err)
