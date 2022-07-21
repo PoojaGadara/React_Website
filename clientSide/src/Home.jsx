@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import {useNavigate} from 'react-router-dom';
-const url='https://localhost:8000/company/createUser';
+const url=`${process.env}/company/createUser`;
 
 
 const Contact = () => {

@@ -20,7 +20,7 @@ const Update = () => {
     useEffect(() => {
         async function getUser() {
          try {
-          const user = await axios.get(`http://localhost:8000/company/showUser/${state.id}`)
+          const user = await axios.get(`http://${process.env}/company/showUser/${state.id}`)
           setUser(user.data);
          } catch (error) {
           console.log("Something is Wrong");
@@ -37,7 +37,7 @@ const Update = () => {
     const updateAPIData = async (e) => {
         e.preventDefault()
         try{
-            await axios.put(`http://localhost:8000/company/updateUser/${state.id}`,{
+            await axios.put(`${process.env}/company/updateUser/${state.id}`,{
                 name,
                 phone,
                 email,
